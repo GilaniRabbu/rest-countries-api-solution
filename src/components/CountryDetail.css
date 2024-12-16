@@ -1,0 +1,88 @@
+.country-detail {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+
+.back-btn {
+    background-color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.flag-section .flag-image {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.info-section h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.details-grid p {
+    margin: 8px 0;
+}
+
+.borders {
+    margin-top: 20px;
+}
+
+.border-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.border-country {
+    color: #000;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.border-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.border-name {
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
