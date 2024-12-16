@@ -23,24 +23,21 @@ const SelectedCountries = ({
       <h2 style={{ textAlign: "center" }}>Selected Countries</h2>
       <div className="selected-container">
         {addCountry.map((country) => (
-          <div className="selected-country" key={country.name.official}>
-            <img src={country.flags.svg} alt={`${country.name.common} Flag`} />
-            <h3>{country.name.common}</h3>
+          <div className="selected-country" key={country.name}>
+            <img src={country.flags.svg} alt={`${country.name} Flag`} />
+            <h3>{country.name}</h3>
             <p>
               <strong>Population:</strong> {country.population}
             </p>
             <p>
               <strong>Region:</strong> {country.region}
             </p>
-            <Link
-              to={`/country/${country.name.common}`}
-              className="details-link"
-            >
+            <Link to={`/country/${country.name}`} className="details-link">
               View Details
             </Link>
             <button
               className="remove-btn"
-              onClick={() => handleRemoveCountry(country.name.common)}
+              onClick={() => handleRemoveCountry(country.name)}
             >
               Remove
             </button>

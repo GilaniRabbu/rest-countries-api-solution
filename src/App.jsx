@@ -6,6 +6,7 @@ import {
   useNavigate,
   useParams,
 } from "react-router-dom";
+import localData from "./data/data.json";
 import Country from "./components/Country";
 import CountryDetail from "./components/CountryDetail";
 import SelectedCountries from "./components/SelectedCountries";
@@ -27,15 +28,21 @@ function App() {
 
   const itemsPerPage = 20;
 
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v3.1/all")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCountries(data);
+  //       setFilteredCountries(data);
+  //       console.log(data);
+  //     })
+  //     .catch((err) => console.error("Error fetching countries:", err));
+  // }, []);
+
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-        setFilteredCountries(data);
-        console.log(data);
-      })
-      .catch((err) => console.error("Error fetching countries:", err));
+    setCountries(localData);
+    console.log(localData);
+    setFilteredCountries(localData);
   }, []);
 
   useEffect(() => {
@@ -43,14 +50,14 @@ function App() {
   }, [addCountry]);
 
   const handleAddCountry = (country) => {
-    if (!addCountry.some((c) => c.name.common === country.name.common)) {
+    if (!addCountry.some((c) => c.name === country.name)) {
       setAddCountry([...addCountry, country]);
     }
   };
 
   const handleRemoveCountry = (countryName) => {
     const updatedCart = addCountry.filter(
-      (country) => country.name.common !== countryName
+      (country) => country.name !== countryName
     );
     setAddCountry(updatedCart);
   };
@@ -77,7 +84,7 @@ function App() {
 
     if (query) {
       result = result.filter((country) =>
-        country.name.common.toLowerCase().includes(query.toLowerCase())
+        country.name.toLowerCase().includes(query.toLowerCase())
       );
     }
 
@@ -180,7 +187,7 @@ const PaginationPage = ({
             <Country
               country={country}
               handleAddCountry={handleAddCountry}
-              key={country.name.official}
+              key={country.name}
             />
           ))}
         </div>

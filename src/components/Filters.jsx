@@ -7,7 +7,7 @@ const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
 
   return (
     <div className="filters">
-      <div class="search-container">
+      <div className="search-container">
         <IoIosSearch className="search-icon" />
         <input
           type="text"

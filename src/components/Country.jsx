@@ -8,11 +8,11 @@ const Country = (props) => {
 
   return (
     <div className="country-card">
-      <Link to={`/country/${name.common}`}>
+      <Link to={`/country/${name}`}>
         <img src={flags.png} alt="Country Flag" className="country-flag" />
       </Link>
       <div className="country-info">
-        <h2>{name.common}</h2>
+        <h2>{name}</h2>
         <p>
           <strong>Population:</strong> {population}
         </p>
@@ -27,29 +27,6 @@ const Country = (props) => {
         </button>
       </div>
     </div>
-
-    // <div className="country-card">
-    //   <div className="country-img-container">
-    //     <img src={flags.png} alt="Country Flag" />
-    //   </div>
-    //   <div className="info">
-    //     <h2 className="info-title">
-    //       <Link to={`/country/${name.common}`}>{name.common}</Link>
-    //     </h2>
-    //     <p>
-    //       <strong>Population:</strong> {population}
-    //     </p>
-    //     <p>
-    //       <strong>Region:</strong> {region}
-    //     </p>
-    //     <p>
-    //       <strong>Capital:</strong> {capital}
-    //     </p>
-    //     <button onClick={() => handleAddCountry(props.country)}>
-    //       Add Country
-    //     </button>
-    //   </div>
-    // </div>
   );
 };
 
