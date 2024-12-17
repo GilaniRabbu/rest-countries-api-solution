@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { FaMoon, FaRegMoon } from "react-icons/fa";
 import "./Header.css";
 
@@ -20,25 +19,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <nav>
-        <ul className="nav-links">
-          <li>
-            <Link to="/" className="mr">
-              Home
-            </Link>
-            <Link to="/selected-countries">Selected Countries</Link>
-          </li>
-          <li>
-            <button
-              onClick={toggleTheme}
-              className="theme-switcher flex ai-cen"
-            >
-              {theme === "light" ? <FaRegMoon /> : <FaMoon />}{" "}
-              {theme === "light" ? "Dark" : "Light"} Mode
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <h1 className="title">Where in the world?</h1>
+      <button onClick={toggleTheme} className="theme-switcher">
+        {theme === "light" ? <FaRegMoon /> : <FaMoon />}{" "}
+        {theme === "light" ? "Dark" : "Light"} Mode
+      </button>
     </header>
   );
 };

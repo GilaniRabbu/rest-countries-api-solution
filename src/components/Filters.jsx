@@ -1,6 +1,7 @@
 import React from "react";
 import "./Filters.css";
 import { IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
@@ -17,17 +18,23 @@ const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
           className="search-input"
         />
       </div>
-      <select
-        value={region}
-        onChange={(e) => onRegionChange(e.target.value)}
-        className="region-select"
-      >
-        {regions.map((reg) => (
-          <option key={reg} value={reg}>
-            {reg}
-          </option>
-        ))}
-      </select>
+      <div>
+        <Link to="/" className="mr">
+          Home
+        </Link>
+        <Link to="/selected-countries">Selected Countries</Link>
+        <select
+          value={region}
+          onChange={(e) => onRegionChange(e.target.value)}
+          className="region-select"
+        >
+          {regions.map((reg) => (
+            <option key={reg} value={reg}>
+              {reg}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 };

@@ -22,7 +22,10 @@ const Country = (props) => {
         <p>
           <strong>Capital:</strong> {capital}
         </p>
-        <button onClick={() => handleAddCountry(props.country)}>
+        <button
+          className="cn-btn"
+          onClick={() => handleAddCountry(props.country)}
+        >
           Add Country
         </button>
       </div>

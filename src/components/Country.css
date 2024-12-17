@@ -13,19 +13,7 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* .country-img-container {
-    width: 100%;
-    height: 10rem;
-    overflow: hidden;
-}
-
-.country-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-button {
+.cn-btn {
     display: block;
     width: 100%;
     padding: 10px;
@@ -39,7 +27,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.cn-btn:hover {
     background: #2980b9;
 }
 

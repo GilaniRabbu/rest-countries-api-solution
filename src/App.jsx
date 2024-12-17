@@ -28,20 +28,8 @@ function App() {
 
   const itemsPerPage = 20;
 
-  // useEffect(() => {
-  //   fetch("https://restcountries.com/v3.1/all")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setCountries(data);
-  //       setFilteredCountries(data);
-  //       console.log(data);
-  //     })
-  //     .catch((err) => console.error("Error fetching countries:", err));
-  // }, []);
-
   useEffect(() => {
     setCountries(localData);
-    console.log(localData);
     setFilteredCountries(localData);
   }, []);
 
@@ -62,34 +50,29 @@ function App() {
     setAddCountry(updatedCart);
   };
 
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-    applyFilters(query, region);
-  };
-
-  const handleRegionChange = (selectedRegion) => {
-    setRegion(selectedRegion);
-    applyFilters(searchQuery, selectedRegion);
-  };
-
-  const applyFilters = (query, selectedRegion) => {
+  // Search and Region Filter Logic
+  const applyFilters = () => {
     let result = countries;
 
-    if (selectedRegion !== "All") {
+    if (region !== "All") {
       result = result.filter(
-        (country) =>
-          country.region.toLowerCase() === selectedRegion.toLowerCase()
+        (country) => country.region.toLowerCase() === region.toLowerCase()
       );
     }
 
-    if (query) {
+    if (searchQuery) {
       result = result.filter((country) =>
-        country.name.toLowerCase().includes(query.toLowerCase())
+        country.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
     setFilteredCountries(result);
   };
+
+  // Apply filters when searchQuery or region changes
+  useEffect(() => {
+    applyFilters();
+  }, [searchQuery, region, countries]);
 
   return (
     <Router>
@@ -102,8 +85,8 @@ function App() {
               countries={filteredCountries}
               handleAddCountry={handleAddCountry}
               itemsPerPage={itemsPerPage}
-              onSearch={handleSearch}
-              onRegionChange={handleRegionChange}
+              setSearchQuery={setSearchQuery}
+              setRegion={setRegion}
               searchQuery={searchQuery}
               region={region}
             />
@@ -116,8 +99,10 @@ function App() {
               countries={filteredCountries}
               handleAddCountry={handleAddCountry}
               itemsPerPage={itemsPerPage}
-              onSearch={handleSearch}
+              setSearchQuery={setSearchQuery}
+              setRegion={setRegion}
               searchQuery={searchQuery}
+              region={region}
             />
           }
         />
@@ -151,8 +136,8 @@ const PaginationPage = ({
   countries,
   handleAddCountry,
   itemsPerPage,
-  onSearch,
-  onRegionChange,
+  setSearchQuery,
+  setRegion,
   searchQuery,
   region,
 }) => {
@@ -174,12 +159,11 @@ const PaginationPage = ({
 
   return (
     <div>
-      {/* <h1>Country Loaded: {countries.length}</h1> */}
       <Filters
         searchQuery={searchQuery}
-        onSearch={onSearch}
+        onSearch={setSearchQuery}
         region={region}
-        onRegionChange={onRegionChange}
+        onRegionChange={setRegion}
       />
       <div className="container">
         <div className="country-grid">
