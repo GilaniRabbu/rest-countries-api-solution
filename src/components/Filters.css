@@ -1,52 +1,85 @@
 .filters {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
-    max-width: 1280px;
-    margin: 48px auto;
-    padding: 0 20px;
+    padding: 3rem 5%;
 }
 
 .search-container {
     position: relative;
-    width: 480px;
+    width: 440px;
 }
 
 .search-icon {
     position: absolute;
-    left: 32px;
+    left: 2rem;
     top: 50%;
     transform: translateY(-50%);
     color: #858585;
 }
 
-input[type="text"] {
+.search-input {
     width: 100%;
-    padding: 18px 18px 18px 74px;
+    padding: 1rem 1rem 1rem 4rem;
     border: none;
     outline: none;
     border-radius: 5px;
-    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
-    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
 }
 
-input[type="text"]::placeholder {
-    color: #c4c4c4;
+.search-input::placeholder {
+    color: #858585;
 }
 
-select {
-    width: 200px;
-    padding: 18px 24px;
+.filter-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #495057;
+    background-color: #ffffff;
+    transition: color 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.link-item:hover {
+    color: #007bff;
+}
+
+.link-icon {
+    font-size: 20px;
+}
+
+.region-select {
+    flex: 1;
+    width: 240px;
+    padding: 16px 16px;
+    font-size: 16px;
+    color: #495057;
+    background-color: #ffffff;
+    border-radius: 4px;
     border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
-    font-size: 14px;
-    font-weight: 600;
+    cursor: pointer;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' stroke-dasharray='12' stroke-dashoffset='12' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 16l-7 -7M12 16l7 -7'%3E%3Canimate fill='freeze' attributeName='stroke-dashoffset' dur='0.3s' values='12;0'/%3E%3C/path%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 24px center;
-    background-size: 12px;
+    background-position: right 20px center;
+    background-size: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -55,11 +88,6 @@ select {
     }
 
     .search-container {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    select {
         width: 100%;
     }
 }
