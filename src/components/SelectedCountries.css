@@ -1,13 +1,5 @@
-:root {
-    --bg-card: #ffffff;
-}
-
-.dark-theme {
-    --bg-card: #5d85ad;
-}
-
 .bm-container {
-    padding: 1.5rem 5%;
+    padding: 2rem 5%;
 }
 
 .bm-grid {
@@ -21,7 +13,7 @@
     width: 250px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
 }
 
 .bm-flag {
@@ -33,18 +25,18 @@
 
 .bm-info {
     padding: 1.5rem;
-    background-color: var(--bg-card);
+    background-color: var(--bg-element);
 }
 
 .bm-name {
-    color: #34495e;
+    color: var(--text-color);
     font-size: 1.125rem;
     font-weight: 800;
     margin-bottom: 1rem;
 }
 
 .bm-info p {
-    color: #34495e;
+    color: var(--text-color);
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
 }
@@ -54,14 +46,14 @@
 }
 
 .bm-info strong {
-    color: #2c3e50;
+    color: var(--text-color);
     font-weight: 600;
 }
 
 .bm-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
 }
 
 .bm-btn {
@@ -71,19 +63,19 @@
     width: 40px;
     height: 40px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     text-decoration: none;
-    color: #c42b2b;
-    background-color: #ffffff;
-    transition: color 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    color: var(--bg-element);
+    background-color: var(--text-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .bm-btn:hover {
-    color: #c04848;
+    opacity: 0.875;
 }
 
 .bm-btn-icon {
-    font-size: 16px;
+    font-size: 1rem;
 }

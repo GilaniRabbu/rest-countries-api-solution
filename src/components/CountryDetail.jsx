@@ -29,20 +29,20 @@ const CountryDetail = () => {
   const borders = country.borders || [];
 
   return (
-    <div className="country-detail">
+    <div className="country-details-container">
       <button className="back-btn" onClick={() => navigate(-1)}>
         ← Back
       </button>
-      <div className="detail-container">
-        <div className="flag-section">
+      <div className="details-container">
+        <div className="flag-container">
           <img
             src={country.flags.svg}
             alt="Country Flag"
             className="flag-image"
           />
         </div>
-        <div className="info-section">
-          <h1>{country.name}</h1>
+        <div className="info-container">
+          <h1 className="info-title">{country.name}</h1>
           <div className="details-grid">
             <div>
               <p>
@@ -73,15 +73,19 @@ const CountryDetail = () => {
               <p>
                 <strong>Languages:</strong> {languages || "N/A"}
               </p>
+              <p>
+                <strong>Time Zones:</strong> {country.timezones || "N/A"}
+              </p>
             </div>
           </div>
-
           {borders.length > 0 && (
             <div className="borders">
-              <strong>Border Countries:</strong>
-              <div className="border-buttons">
+              <p>
+                <strong>Border Countries:</strong>
+              </p>
+              <div className="border-div">
                 {borders.map((border) => (
-                  <span key={border} className="border-country">
+                  <span key={border} className="border-names">
                     {border}
                   </span>
                 ))}

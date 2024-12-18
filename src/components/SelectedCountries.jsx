@@ -26,11 +26,11 @@ const SelectedCountries = ({
         style={{
           textAlign: "center",
           fontSize: "1.5rem",
-          marginTop: "1rem",
-          marginBottom: "1.5rem",
+          fontWeight: "bold",
+          marginBlock: "1.5rem",
         }}
       >
-        Favorites Countries
+        Bookmarked Countries
       </h2>
       <div className="bm-container">
         <button className="back-btn" onClick={() => navigate(-1)}>

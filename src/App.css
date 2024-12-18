@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 :root {
-  --bg-color: #f9f9f9;
-  --text-color: #333;
-  --heading-color: #2c3e50;
+  --bg-color: hsl(0, 0%, 98%);
+  --text-color: hsl(200, 15%, 8%);
+  --bg-element: hsl(0, 0%, 100%);
+  --input-color: hsl(0, 0%, 60%);
+
+  --primary-font: "Nunito Sans", serif;
 }
 
 .dark-theme {
-  --bg-color: #2c3e50;
-  --text-color: #f9f9f9;
-  --heading-color: #f1c40f;
+  --bg-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --bg-element: hsl(209, 23%, 22%);
+  --input-color: hsl(0, 0%, 70%);
 }
 
 *,
@@ -23,9 +29,9 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  background-color: var(--bg-color);
+  font-family: var(--primary-font);
   color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -36,23 +42,15 @@ body {
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* grid-template-columns: repeat(4, 1fr); */
 }
 
-/* @media (max-width: 1200px) {
-  .country-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.back-btn {
+  color: var(--text-color);
+  background-color: var(--bg-element);
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  padding: 0.875rem 1.25rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-
-@media (max-width: 992px) {
-  .country-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .country-grid {
-    grid-template-columns: 1fr;
-  }
-} */

@@ -1,15 +1,8 @@
-:root {
-    --bg-card: #ffffff;
-}
-
-.dark-theme {
-    --bg-card: #5d85ad;
-}
-
 .country-card {
-    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.03);
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
 }
 
 .country-flag {
@@ -21,18 +14,18 @@
 
 .country-info {
     padding: 1.5rem;
-    background-color: var(--bg-card);
+    background-color: var(--bg-element);
 }
 
 .country-name {
-    color: #34495e;
+    color: var(--text-color);
     font-size: 1.125rem;
     font-weight: 800;
     margin-bottom: 1rem;
 }
 
 .country-info p {
-    color: #34495e;
+    color: var(--text-color);
     font-size: 0.875rem;
     margin-bottom: 0.5rem;
 }
@@ -42,24 +35,28 @@
 }
 
 .country-info strong {
-    color: #2c3e50;
+    color: var(--text-color);
     font-weight: 600;
 }
 
 .country-btn {
-    display: block;
-    width: 100%;
-    padding: 0.625rem;
-    font-size: 1rem;
-    background: #3498db;
-    color: #fff;
+    position: absolute;
+    top: 0.875rem;
+    right: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
     border: none;
     border-radius: 6px;
-    cursor: pointer;
-    margin-top: 0.625rem;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    color: var(--bg-element);
+    background: var(--text-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .country-btn:hover {
-    background: #2980b9;
+    opacity: 0.875;
 }

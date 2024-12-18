@@ -1,21 +1,13 @@
-:root {
-    --nav-bg: #ecebe1;
-    --nav-text: #35afaa;
-}
-
-.dark-theme {
-    --nav-bg: #3c3d3f;
-    --nav-text: #ecebe1;
-}
-
 .header {
     display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
-    color: var(--nav-text);
-    background-color: var(--nav-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    background-color: var(--bg-element);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .title {

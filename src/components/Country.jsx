@@ -1,6 +1,7 @@
 import React from "react";
-import "./Country.css";
 import { Link } from "react-router-dom";
+import { BsBookmarkCheckFill } from "react-icons/bs";
+import "./Country.css";
 
 const Country = (props) => {
   const { name, population, region, flags, capital } = props.country;
@@ -26,7 +27,7 @@ const Country = (props) => {
           className="country-btn"
           onClick={() => handleAddCountry(props.country)}
         >
-          Add Country
+          <BsBookmarkCheckFill />
         </button>
       </div>
     </div>
