@@ -12,7 +12,7 @@ const Country = (props) => {
         <img src={flags.png} alt="Country Flag" className="country-flag" />
       </Link>
       <div className="country-info">
-        <h2>{name}</h2>
+        <h2 className="country-name">{name}</h2>
         <p>
           <strong>Population:</strong> {population}
         </p>
@@ -23,7 +23,7 @@ const Country = (props) => {
           <strong>Capital:</strong> {capital}
         </p>
         <button
-          className="cn-btn"
+          className="country-btn"
           onClick={() => handleAddCountry(props.country)}
         >
           Add Country
