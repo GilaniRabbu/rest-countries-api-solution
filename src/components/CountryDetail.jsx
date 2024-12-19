@@ -74,7 +74,7 @@ const CountryDetail = () => {
                 <strong>Languages:</strong> {languages || "N/A"}
               </p>
               <p>
-                <strong>Time Zones:</strong> {country.timezones || "N/A"}
+                <strong>Alpha3 Code:</strong> {country.alpha3Code || "N/A"}
               </p>
             </div>
           </div>
