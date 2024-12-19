@@ -8,12 +8,7 @@ const Country = (props) => {
   return (
     <div className="country-card">
       <Link to={`/country/${name}`}>
-        <img
-          src={flags.png}
-          alt="Country Flag"
-          loading="lazy"
-          className="country-flag"
-        />
+        <img src={flags.png} alt="Country Flag" className="country-flag" />
       </Link>
       <div className="country-info">
         <h2 className="country-name" title={name}>
