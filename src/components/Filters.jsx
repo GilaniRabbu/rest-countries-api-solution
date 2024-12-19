@@ -20,10 +20,14 @@ const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
         />
       </div>
       <div className="filter-box">
-        <Link to="/" className="link-item">
+        <Link to="/" className="link-item" aria-label="Go to Home Page">
           <AiFillHome className="link-icon" />
         </Link>
+        <label htmlFor="region-select" className="sr-only">
+          Select a Region
+        </label>
         <select
+          id="region-select"
           value={region}
           onChange={(e) => onRegionChange(e.target.value)}
           className="region-select"
