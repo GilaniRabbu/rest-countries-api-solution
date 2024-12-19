@@ -39,6 +39,7 @@ const CountryDetail = () => {
             src={country.flags.svg}
             alt="Country Flag"
             className="flag-image"
+            loading="lazy"
           />
         </div>
         <div className="info-container">
