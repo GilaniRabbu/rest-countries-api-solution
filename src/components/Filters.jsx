@@ -1,9 +1,8 @@
 import React from "react";
-import "./Filters.css";
-import { IoIosSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { IoIosSearch } from "react-icons/io";
 import { AiFillHome } from "react-icons/ai";
-import { BsFillBookmarkStarFill } from "react-icons/bs";
+import "./Filters.css";
 
 const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
@@ -23,9 +22,6 @@ const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
       <div className="filter-box">
         <Link to="/" className="link-item">
           <AiFillHome className="link-icon" />
-        </Link>
-        <Link to="/selected-countries" className="link-item">
-          <BsFillBookmarkStarFill className="link-icon" />
         </Link>
         <select
           value={region}
