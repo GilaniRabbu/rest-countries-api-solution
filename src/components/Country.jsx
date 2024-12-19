@@ -13,7 +13,9 @@ const Country = (props) => {
         <img src={flags.png} alt="Country Flag" className="country-flag" />
       </Link>
       <div className="country-info">
-        <h2 className="country-name">{name}</h2>
+        <h2 className="country-name" title={name}>
+          {name.length > 15 ? `${name.substring(0, 15)} ...` : name}
+        </h2>
         <p>
           <strong>Population:</strong> {population}
         </p>
