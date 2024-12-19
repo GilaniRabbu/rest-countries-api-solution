@@ -19,7 +19,7 @@ function App() {
   const [filteredCountries, setFilteredCountries] = useState([]);
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [region, setRegion] = useState("All");
+  const [region, setRegion] = useState("Select All Region");
 
   const itemsPerPage = 20;
 
@@ -32,7 +32,7 @@ function App() {
   const applyFilters = () => {
     let result = countries;
 
-    if (region !== "All") {
+    if (region !== "Select All Region") {
       result = result.filter(
         (country) => country.region.toLowerCase() === region.toLowerCase()
       );

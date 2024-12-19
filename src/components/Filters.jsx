@@ -5,7 +5,14 @@ import { AiFillHome } from "react-icons/ai";
 import "./Filters.css";
 
 const Filters = ({ searchQuery, onSearch, region, onRegionChange }) => {
-  const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
+  const regions = [
+    "Select All Region",
+    "Africa",
+    "Americas",
+    "Asia",
+    "Europe",
+    "Oceania",
+  ];
 
   return (
     <div className="filters">
