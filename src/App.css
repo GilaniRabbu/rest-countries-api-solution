@@ -5,6 +5,7 @@
   --text-color: hsl(200, 15%, 8%);
   --bg-element: hsl(0, 0%, 100%);
   --input-color: hsl(0, 0%, 60%);
+  --icon-color: hsl(210, 20%, 30%);
 
   --primary-font: "Nunito Sans", serif;
 }
@@ -14,6 +15,7 @@
   --text-color: hsl(0, 0%, 100%);
   --bg-element: hsl(209, 23%, 22%);
   --input-color: hsl(0, 0%, 70%);
+  --icon-color: hsl(190, 45%, 70%);
 }
 
 *,

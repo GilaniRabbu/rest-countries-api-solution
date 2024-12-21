@@ -52,7 +52,7 @@
   height: 48px;
   border-radius: 6px;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--icon-color);
   background-color: var(--bg-element);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
@@ -63,7 +63,7 @@
 
 .region-select {
   flex: 1;
-  width: 240px;
+  width: 210px;
   padding: 1rem;
   font-size: 1rem;
   color: var(--text-color);
