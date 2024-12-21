@@ -20,7 +20,7 @@
   color: var(--text-color);
   font-size: 1.125rem;
   font-weight: 800;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .country-info p:last-child {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .country-info strong {
