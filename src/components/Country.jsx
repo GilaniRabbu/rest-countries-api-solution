@@ -7,7 +7,7 @@ const Country = (props) => {
 
   return (
     <div className="country-card">
-      <Link to={`/country/${name}`}>
+      <Link to={`/country/${encodeURIComponent(name)}`}>
         <img
           src={flags.png}
           alt="Country Flag"
